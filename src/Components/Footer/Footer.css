@@ -1,0 +1,182 @@
+/* Footer Styling - Consistent with Navbar */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 10%;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #ddd;
+    border-top: 2px solid #4a4a4a;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Footer Logo */
+.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer .footer-logo img {
+    width: max(12vw, 120px);
+    transition: all 0.3s ease;
+}
+
+.footer .footer-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Navigation Links */
+.footer ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.footer ul li {
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s;
+}
+
+.footer ul li:hover {
+    color: #4caf50;
+    transform: translateY(-3px);
+    text-shadow: 0 4px 12px rgba(0, 255, 0, 0.4);
+}
+
+/* Social Icons */
+.footer .social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #4caf50;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.footer .social-icons a:hover {
+    background: #45a049;
+    transform: scale(1.15) rotate(10deg);
+}
+
+/* Footer Text */
+.footer p {
+    font-size: 15px;
+    color: #d1d1d1;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: #ffffff;
+}
+
+/* Footer Copyright */
+.footer .copyright {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer .copyright:hover {
+    color: #ffffff;
+}
+
+/* Footer Hover Effects */
+.footer:hover {
+    background: linear-gradient(135deg, #29293d, #1e1e2f);
+    transform: scale(1.02);
+    box-shadow: 0 -12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .footer {
+        padding: 25px 8%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footer-logo {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .footer ul {
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding: 20px 5%;
+    }
+
+    .footer .footer-logo img {
+        width: max(10vw, 100px);
+    }
+
+    .footer ul {
+        gap: 25px;
+    }
+
+    .footer .social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 20px 4%;
+    }
+
+    .footer ul {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .footer .social-icons a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer {
+        padding: 15px 3%;
+    }
+
+    .footer ul {
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    .footer .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+}

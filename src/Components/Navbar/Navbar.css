@@ -1,0 +1,271 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10%;
+    color: #f0f0f0;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    border-bottom: 2px solid #4a4a4a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(135deg, #29293d, #1e1e2f);
+}
+
+/* Logo Styling */
+.navbar .logo {
+    width: max(14vw, 130px);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Menu */
+.navbar ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li:hover {
+    color: #4caf50;
+    transform: translateY(-3px);
+    text-shadow: 0 4px 12px rgba(0, 255, 0, 0.4);
+}
+
+/* Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: max(1vw, 15px);
+}
+
+/* Select Dropdown */
+.navbar select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar select:hover {
+    background: #4caf50;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.navbar option {
+    background-color: #09005c;
+    color: white;
+}
+
+/* Button Styling */
+.navbar button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #29293d;
+    background: #4caf50;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+    background: #45a049;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Button Icon */
+.navbar button img {
+    width: 18px;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover img {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Trigger Button */
+.btn-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #29293d;
+    background: #4caf50;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-dropdown:hover {
+    background: #45a049;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 55px; 
+    left: 0;
+    min-width: 160px;
+    background: #2a2a40;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Dropdown stays open when hovering */
+.dropdown-container:hover .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background: #4caf50;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 20px 8%;
+    }
+
+    .navbar button, .btn-dropdown {
+        gap: 10px;
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+
+    .navbar button img {
+        width: 14px;
+    }
+
+    .navbar ul {
+        gap: 30px;
+    }
+
+    .dropdown-menu {
+        top: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar button, .btn-dropdown {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .navbar button img {
+        width: 12px;
+    }
+
+    .dropdown-menu {
+        min-width: 140px;
+    }
+
+    .dropdown-item {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 500px) {
+    .navbar {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar .logo {
+        width: max(18vw, 100px);
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar button, .btn-dropdown {
+        padding: 8px 18px;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .navbar button img {
+        width: 10px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-menu {
+        top: 40px;
+        left: 0;
+        min-width: 130px;
+    }
+}
